@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* Utility class */
+.flexCenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(185deg, white, purple);
+    
+}
+nav{
+    padding: 20px;
+    
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+#logo{
+    font-size: larger;  
+    background: black;
+    color: white;
+    padding: 5px 10px; 
+    margin: 5px 10px;
+    cursor: pointer;
+    min-width: 217px;
+    letter-spacing: 2px;
+}
+#navbar{
+    
+}
+
+nav #navbar li{
+    padding: 5px 5px;
+    margin: 5px 10px;
+    list-style: none;
+    font-size: large;
+    cursor: pointer;
+}
+nav #navbar li:hover, nav #navbar li:active{
+    background-color:rgb(229, 160, 229);
+    border-radius: 5px;
+}
+
+#icons i{
+    padding: 10px;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#icons{
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#icons i[class="fa-solid fa-xmark  icons"]{
+    display: none;
+}
+
+@media (max-width:42em){
+    #icons{
+        display: block;
+        z-index: 999;
+    }
+
+    #navbar{
+        /* display: none; */
+        width: 100%;
+        height: 100vh;
+        transform: translateX(0%);
+        transition: all 0.3s linear;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: lightblue;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+
+        opacity: o;
+        visibility: hidden;
+        pointer-events: none;
+        
+    }
+
+    #logo{
+        letter-spacing: 5px;
+    }
+
+    .active #navbar{
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active #icons .fa-bars{
+        display: none;
+    }
+    .active #icons .fa-xmark{
+        display: block;
+    }
+
+}
