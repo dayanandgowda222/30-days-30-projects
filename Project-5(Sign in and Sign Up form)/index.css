@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url("bgimg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.form-group{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    padding: 50px 20px;
+}
+
+.flex{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+}
+
+.form-input h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+h1::after{
+    display:block;
+    margin: auto;
+    margin-top: 5px;
+    content: '';
+    width: 80px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+}
+
+.form-input{
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+.form-input input{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size:large ;
+}
+.form-group p{
+    /* justify-self: flex-start; */
+    align-self: flex-start;
+    margin-left: 25px;
+    
+}
+ button{
+    margin-top: 25px;
+    font-size: large;
+    padding: 10px 30px;
+    background-color: #3c00a0;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 1s;
+    
+}
+p+div{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+.disable{
+    color: #555;
+    background-color: rgb(198, 198, 198);
+}
