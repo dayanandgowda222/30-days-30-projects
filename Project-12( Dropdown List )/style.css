@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: azure;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg');
+}
+
+nav{
+    background-color: coral;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+nav li{
+    /* width: 120px; */
+    list-style: none;
+    text-decoration: none;
+    padding: 5px 10px ;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.active, nav>ul>li:hover{
+    background-color: rgb(255, 68, 0);
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+.fa-solid{
+    color: white;
+    margin-left: 5px;
+    font-size: small;
+}
+
+.sub-menu-1{
+    display: none;
+}
+
+nav ul li:hover .sub-menu-1{
+    display: flex;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: -10px;
+}
+
+.sub-menu-1 ul{
+   display: flex;
+   flex-direction: column;
+   background-color: coral; 
+   
+}
+.sub-menu-1 ul li{
+    margin: 15px 0 0;
+    min-width:200px;
+    border-radius: 0;
+    border-bottom: 1px white dotted;
+}
+
+.sub-menu-1 ul li:last-child{
+    border: none;
+}
+
+
+.sub-menu-1 ul li>a:hover{
+    color: gray;
+}
+
+.sub-menu-2 ul{
+    position: absolute;
+    margin-left: 30px; 
+    display: none;
+}
+
+.sub-menu-1 ul li:hover .sub-menu-2 ul{
+    display: block;
+}
